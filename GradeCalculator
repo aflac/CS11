@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+    int main() {
+      cout << "What percent did you get? ";
+        double score;
+        cin >> score;
+        
+        cout << "Are you Pnp (yes/no)";
+        string choice;
+        cin >> choice;
+        
+        string letter_grade = "";
+
+       if(choice == "no"){ 
+         if (score >= 90) {
+         cout << "A" << endl;
+        }
+         else if (score >= 80) {
+        cout << "B" << endl;
+        }
+         else if (score >= 70) {
+        cout << "C" << endl;
+        }
+        else if ( choice == "yes"){
+            if(score >= 70){
+                cout<<"You passed! congrats"<< endl;
+            }
+            else if (score < 70){
+                cout<<"you didn't pass ):"<< endl;
+            }
+        }
+       }
+    cout << "Letter grade is: " << letter_grade << endl;
+}
