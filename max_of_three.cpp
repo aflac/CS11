@@ -9,19 +9,16 @@ int main()
     cin >> num1;
     cin >> num2;
     cin >> num3;
-    double max_num;
+    double max_num = num1;
 
-    if (num1 > num2 && num1 > num3)
+    if (num2 > max_num)
     {
-        max_num == num1;
+        max_num = num2;
     }
-    else if (num2 > num1 && num2 > num3)
+    if (num3 > max_num)
     {
-        max_num == num2;
+        max_num = num3;
     }
-    else if (num3 > num1 && num3 > num2)
-    {
-        max_num == num3;
-    }
+ 
     cout << max_num << endl;
 }
