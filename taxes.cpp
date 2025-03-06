@@ -12,10 +12,6 @@ int main() {
     double TAXABLE_INCOME = (GROSS_INCOME-STD_DEDUCTION);
     double TAXES_OWED;
 
-
-
-
-
-
+ 
     cout << TAXES_OWED <<endl;
 }
