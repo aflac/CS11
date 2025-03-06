@@ -33,20 +33,20 @@ int main() {
     }
     // bracket 4
     else if (TAXABLE_INCOME > B_3_HIGH && TAXABLE_INCOME< B_4_HIGH) {
-        TAXES_OWED = (TAXABLE_INCOME - B_3_HIGH) * 0.24 + (B_3_HIGH - 47150) * 0.22;
+        TAXES_OWED = (TAXABLE_INCOME - B_3_HIGH) * 0.24 + (B_3_HIGH - 47150) * 0.22 + (B_2_HIGH - 11600) * 0.12 + (B_1_HIGH - 0) * 0.1 ;
     }
     // bracket 5
     else if (TAXABLE_INCOME > B_4_HIGH && TAXABLE_INCOME< B_5_HIGH) {
-        TAXES_OWED = (TAXABLE_INCOME - B_4_HIGH) * 0.32 + (B_4_HIGH - 100525) * 0.24;
+        TAXES_OWED = (TAXABLE_INCOME - B_4_HIGH) * 0.32 + (B_4_HIGH - 100525) * 0.24 + (B_3_HIGH - 47150) * 0.22 + (B_2_HIGH - 11600) * 0.12 + (B_1_HIGH - 0) * 0.1 ;
     }
     // bracket 6
     else if (TAXABLE_INCOME > B_5_HIGH && TAXABLE_INCOME< B_6_HIGH) {
-        TAXES_OWED = (TAXABLE_INCOME - B_5_HIGH) * 0.35 + (B_5_HIGH - 191950) * 0.32;
+        TAXES_OWED = (TAXABLE_INCOME - B_5_HIGH) * 0.35 + (B_5_HIGH - 191950) * 0.32 + (B_4_HIGH - 100525) * 0.24 + (B_3_HIGH - 47150) * 0.22 + (B_2_HIGH - 11600) * 0.12 + (B_1_HIGH - 0) * 0.1 ;
     }
     // bracket 7
     else if (TAXABLE_INCOME > B_6_HIGH) {
-        TAXES_OWED = (TAXABLE_INCOME - B_6_HIGH) * 0.37 + (B_6_HIGH - 243725) * 0.35;
-
+        TAXES_OWED = (TAXABLE_INCOME - B_6_HIGH) * 0.37 + (B_6_HIGH - 243725) * 0.35 + (B_5_HIGH - 191950) * 0.32 + (B_4_HIGH - 100525) * 0.24 + (B_3_HIGH - 47150) * 0.22 + (B_2_HIGH - 11600) * 0.12 + (B_1_HIGH - 0) * 0.1;
     }
     cout << TAXES_OWED <<endl;
 }
+
