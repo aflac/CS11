@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -19,8 +19,12 @@ int main() {
 
     double TAXABLE_INCOME = (GROSS_INCOME-STD_DEDUCTION);
     double TAXES_OWED;
+
     // bracket 1
-    if(TAXABLE_INCOME < B_1_HIGH){
+    if(GROSS_INCOME< STD_DEDUCTION){
+        TAXES_OWED = 0;
+   }
+    else if(TAXABLE_INCOME < B_1_HIGH){
         TAXES_OWED = TAXABLE_INCOME * 0.10;
     }
     // bracket 2
@@ -47,6 +51,5 @@ int main() {
     else if (TAXABLE_INCOME > B_6_HIGH) {
         TAXES_OWED = (TAXABLE_INCOME - B_6_HIGH) * 0.37 + (B_6_HIGH - 243725) * 0.35 + (B_5_HIGH - 191950) * 0.32 + (B_4_HIGH - 100525) * 0.24 + (B_3_HIGH - 47150) * 0.22 + (B_2_HIGH - 11600) * 0.12 + (B_1_HIGH - 0) * 0.1;
     }
-    cout << TAXES_OWED <<endl;
+    cout <<TAXES_OWED <<endl;
 }
-
